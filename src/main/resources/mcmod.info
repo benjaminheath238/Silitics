@@ -1,0 +1,16 @@
+[
+{
+  "modid": "silitics",
+  "name": "Silitics",
+  "description": "Silitics.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["BjmH"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

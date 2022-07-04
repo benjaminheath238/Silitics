@@ -1,0 +1,23 @@
+package com.bjmh.silitics.item;
+
+import com.bjmh.silitics.Silitics;
+
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+public class SiliticsItem extends Item {
+    public SiliticsItem(String name) {
+        setUnlocalizedName(Silitics.MODID + "." + name);
+        setRegistryName(Silitics.MODID + ":" + name);
+        //setCreativeTab(ScivityTabs.ScivityItemsTab);
+        ModItems.ITEMS.add(this);
+    }
+    
+    @SideOnly(Side.CLIENT)
+    public void initModel() {
+        ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
+    }
+}
