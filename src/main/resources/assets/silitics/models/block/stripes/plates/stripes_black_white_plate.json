@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/stripes/plates/stripes_black_white_plate",
+    "down": "silitics:blocks/stripes/plates/stripes_black_white_plate",
+    "up": "silitics:blocks/stripes/plates/stripes_black_white_plate",
+    "east": "silitics:blocks/stripes/plates/stripes_black_white_plate",
+    "west": "silitics:blocks/stripes/plates/stripes_black_white_plate",
+    "north": "silitics:blocks/stripes/plates/stripes_black_white_plate",
+    "south": "silitics:blocks/stripes/plates/stripes_black_white_plate"
+  }
+}

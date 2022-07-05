@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/industrial/shiny/industrial_shiny_plate_large",
+    "down": "silitics:blocks/industrial/shiny/industrial_shiny_plate_large",
+    "up": "silitics:blocks/industrial/shiny/industrial_shiny_plate_large",
+    "east": "silitics:blocks/industrial/shiny/industrial_shiny_plate_large",
+    "west": "silitics:blocks/industrial/shiny/industrial_shiny_plate_large",
+    "north": "silitics:blocks/industrial/shiny/industrial_shiny_plate_large",
+    "south": "silitics:blocks/industrial/shiny/industrial_shiny_plate_large"
+  }
+}
