@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/industrial/corroded/industrial_corroded",
+    "down": "silitics:blocks/industrial/corroded/industrial_corroded",
+    "up": "silitics:blocks/industrial/corroded/industrial_corroded",
+    "east": "silitics:blocks/industrial/corroded/industrial_corroded",
+    "west": "silitics:blocks/industrial/corroded/industrial_corroded",
+    "north": "silitics:blocks/industrial/corroded/industrial_corroded",
+    "south": "silitics:blocks/industrial/corroded/industrial_corroded"
+  }
+}

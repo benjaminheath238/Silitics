@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/industrial/clean/industrial_clean",
+    "down": "silitics:blocks/industrial/clean/industrial_clean",
+    "up": "silitics:blocks/industrial/clean/industrial_clean",
+    "east": "silitics:blocks/industrial/clean/industrial_clean",
+    "west": "silitics:blocks/industrial/clean/industrial_clean",
+    "north": "silitics:blocks/industrial/clean/industrial_clean",
+    "south": "silitics:blocks/industrial/clean/industrial_clean"
+  }
+}

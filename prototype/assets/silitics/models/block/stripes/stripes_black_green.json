@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/stripes/stripes_black_green",
+    "down": "silitics:blocks/stripes/stripes_black_green",
+    "up": "silitics:blocks/stripes/stripes_black_green",
+    "east": "silitics:blocks/stripes/stripes_black_green",
+    "west": "silitics:blocks/stripes/stripes_black_green",
+    "north": "silitics:blocks/stripes/stripes_black_green",
+    "south": "silitics:blocks/stripes/stripes_black_green"
+  }
+}

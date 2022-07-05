@@ -35,5 +35,4 @@ run
 forge*changelog.txt
 
 # Prototype Files
-prototype/assets/
 prototype/*.log

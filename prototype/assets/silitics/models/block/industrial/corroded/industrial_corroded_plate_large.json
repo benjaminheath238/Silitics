@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/industrial/corroded/industrial_corroded_plate_large",
+    "down": "silitics:blocks/industrial/corroded/industrial_corroded_plate_large",
+    "up": "silitics:blocks/industrial/corroded/industrial_corroded_plate_large",
+    "east": "silitics:blocks/industrial/corroded/industrial_corroded_plate_large",
+    "west": "silitics:blocks/industrial/corroded/industrial_corroded_plate_large",
+    "north": "silitics:blocks/industrial/corroded/industrial_corroded_plate_large",
+    "south": "silitics:blocks/industrial/corroded/industrial_corroded_plate_large"
+  }
+}
