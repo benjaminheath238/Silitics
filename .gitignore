@@ -30,12 +30,7 @@ out
 eclipse
 run
 .vscode/
+prototype/
 
 # Files from Forge MDK
 forge*changelog.txt
-
-# Test assets
-prototype/assets/test/
-prototype/assets/minecraft/
-*.log
-test.ini
