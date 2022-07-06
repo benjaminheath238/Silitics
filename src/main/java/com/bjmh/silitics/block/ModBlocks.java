@@ -127,6 +127,62 @@ public enum ModBlocks {
             .next(RING_P8)
             .build();
         }
+    },
+    
+    FACTORY_NORMAL() {
+        @Override
+        public void generate(BlockFactory factory) {
+            factory.newBlockGroup("factory_normal", 5F, 17F, 0F, Material.IRON, false)
+            .next()
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
+            .build();
+        }
+    },
+    
+    FACTORY_SHINY() {
+        @Override
+        public void generate(BlockFactory factory) {
+            factory.newBlockGroup("factory_shiny", 6F, 20F, 0F, Material.IRON, false)
+            .next()
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
+            .build();
+        }
+    },
+    
+    FACTORY_DARK() {
+        @Override
+        public void generate(BlockFactory factory) {
+            factory.newBlockGroup("factory_dark", 5F, 17F, 0F, Material.IRON, false)
+            .next()
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
+            .build();
+        }
+    },
+    
+    FACTORY_CORRODED() {
+        @Override
+        public void generate(BlockFactory factory) {
+            factory.newBlockGroup("factory_corroded", 20F, 10F, 0F, Material.IRON, false)
+            .next()
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
+            .build();
+        }
     };
 
     public static final List<Block> BLOCKS = new ArrayList<>();
