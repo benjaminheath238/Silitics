@@ -128,6 +128,25 @@ public enum ModBlocks {
             .build();
         }
     },
+
+    CONCRETE() {
+        @Override
+        public void generate(BlockFactory factory) {
+            factory.newBlockGroup("industrial_corroded", 15F, 8F, 0F, Material.IRON, false)
+            .next("blue")
+            .next("cyan")
+            .next("dark")
+            .next("green")
+            .next("light")
+            .next("lime")
+            .next("magenta")
+            .next("orange")
+            .next("red")
+            .next("white")
+            .next("yellow")
+            .build();
+        }
+    },
     
     FACTORY_NORMAL() {
         @Override

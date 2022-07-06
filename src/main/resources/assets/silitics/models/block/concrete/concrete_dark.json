@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/concrete/concrete_dark",
+    "down": "silitics:blocks/concrete/concrete_dark",
+    "up": "silitics:blocks/concrete/concrete_dark",
+    "east": "silitics:blocks/concrete/concrete_dark",
+    "west": "silitics:blocks/concrete/concrete_dark",
+    "north": "silitics:blocks/concrete/concrete_dark",
+    "south": "silitics:blocks/concrete/concrete_dark"
+  }
+}
