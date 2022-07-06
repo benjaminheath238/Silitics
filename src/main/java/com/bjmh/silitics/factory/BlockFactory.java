@@ -19,9 +19,6 @@ public class BlockFactory {
     private boolean rotates;
     private List<Block> blocks;
 
-    public BlockFactory() {
-    }
-
     public BlockFactory newBlockGroup(String baseName, float hardness, float resistance, float light, Material material,
             boolean rotates) {
         this.baseName = baseName;

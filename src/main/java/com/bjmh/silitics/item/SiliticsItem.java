@@ -1,6 +1,7 @@
 package com.bjmh.silitics.item;
 
 import com.bjmh.silitics.Silitics;
+import com.bjmh.silitics.gui.SiliticsTabs;
 
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -12,7 +13,7 @@ public class SiliticsItem extends Item {
     public SiliticsItem(String name) {
         setUnlocalizedName(Silitics.MODID + "." + name);
         setRegistryName(Silitics.MODID + ":" + name);
-        //setCreativeTab(ScivityTabs.ScivityItemsTab);
+        setCreativeTab(SiliticsTabs.SILITICS_GENERAL_TAB);
         ModItems.ITEMS.add(this);
     }
     

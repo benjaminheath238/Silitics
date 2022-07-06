@@ -11,9 +11,6 @@ public class ItemFactory {
     private String baseName;
     private List<Item> items;
 
-    public ItemFactory() {
-    }
-
     public ItemFactory newItemGroup(String baseName) {
         this.baseName = baseName;
         this.items = new ArrayList<>();

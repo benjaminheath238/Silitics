@@ -1,6 +1,7 @@
 package com.bjmh.silitics.block;
 
 import com.bjmh.silitics.Silitics;
+import com.bjmh.silitics.gui.SiliticsTabs;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -16,7 +17,7 @@ public class SiliticsBlock extends Block {
         super(materialIn);
         setUnlocalizedName(Silitics.MODID + "." + name);
         setRegistryName(Silitics.MODID + ":" + name);
-        //setCreativeTab(ScivityTabs.ScivityConstructionTab);
+        setCreativeTab(SiliticsTabs.SILITICS_GENERAL_TAB);
         setHardness(hardness);
         setResistance(resistance);
         setLightLevel(light);

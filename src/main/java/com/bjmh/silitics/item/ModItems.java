@@ -36,7 +36,7 @@ public enum ModItems {
 
     public static final List<Item> ITEMS = new ArrayList<>();
 
-    public void generate(ItemFactory factory) {}
+    public abstract void generate(ItemFactory factory);
 
     static {
         ItemFactory factory = new ItemFactory();

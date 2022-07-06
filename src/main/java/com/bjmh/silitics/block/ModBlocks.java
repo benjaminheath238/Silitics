@@ -212,7 +212,7 @@ public enum ModBlocks {
     public static final String BRACING_P8 = "bracing_p8";
     public static final String RING_P8 = "ring_p8";    
 
-    public void generate(BlockFactory factory) {}
+    public abstract void generate(BlockFactory factory);
 
     static {
         BlockFactory factory = new BlockFactory();
