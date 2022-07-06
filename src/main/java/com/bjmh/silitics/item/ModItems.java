@@ -18,7 +18,7 @@ public enum ModItems {
             .next("industrial_shiny")
             .next("factory_normal")
             .next("factory_corroded")
-            .next("factory_normal")
+            .next("factory_dark")
             .next("factory_shiny")
             .next("laboratory_clean")
             .next("laboratory_green")
