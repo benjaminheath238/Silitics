@@ -35,4 +35,10 @@ run
 forge*changelog.txt
 
 # Prototype Files
-prototype/*.log
+prototype/
+
+!prototype/assets/silitics/textures/blocks/bases/
+!prototype/assets/silitics/textures/blocks/layers/
+!prototype/assets/silitics/textures/items/bases/
+!prototype/assets/silitics/textures/items/layers/
+!prototype/*.ini
