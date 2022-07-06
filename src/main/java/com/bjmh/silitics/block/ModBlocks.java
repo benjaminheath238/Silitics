@@ -30,17 +30,59 @@ public enum ModBlocks {
             .build();
         }
     },
+
+    LABORATORY_CLEAN() {
+        @Override
+        public void generate(BlockFactory factory) {
+            factory.newBlockGroup("laboratory_clean", 3F, 10F, 0F, Material.IRON, false)
+            .next()
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
+            .build();
+        }
+    },
+
+    LABORATORY_GREEN() {
+        @Override
+        public void generate(BlockFactory factory) {
+            factory.newBlockGroup("laboratory_green", 3F, 10F, 0F, Material.IRON, false)
+            .next()
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
+            .build();
+        }
+    },
+
+    LABORATORY_SHINY() {
+        @Override
+        public void generate(BlockFactory factory) {
+            factory.newBlockGroup("laboratory_shiny", 3F, 10F, 0F, Material.IRON, false)
+            .next()
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
+            .build();
+        }
+    },
     
     INDUSTRIAL_CLEAN() {
         @Override
         public void generate(BlockFactory factory) {
             factory.newBlockGroup("industrial_clean", 4F, 15F, 0F, Material.IRON, false)
             .next()
-            .next("plate_large")
-            .next("panel_large")
-            .next("bracing_p4")
-            .next("bracing_p8")
-            .next("ring_p8")
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
             .build();
         }
     },
@@ -50,11 +92,11 @@ public enum ModBlocks {
         public void generate(BlockFactory factory) {
             factory.newBlockGroup("industrial_shiny", 4F, 18F, 0F, Material.IRON, false)
             .next()
-            .next("plate_large")
-            .next("panel_large")
-            .next("bracing_p4")
-            .next("bracing_p8")
-            .next("ring_p8")
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
             .build();
         }
     },
@@ -64,11 +106,11 @@ public enum ModBlocks {
         public void generate(BlockFactory factory) {
             factory.newBlockGroup("industrial_normal", 4F, 15F, 0F, Material.IRON, false)
             .next()
-            .next("plate_large")
-            .next("panel_large")
-            .next("bracing_p4")
-            .next("bracing_p8")
-            .next("ring_p8")
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
             .build();
         }
     },
@@ -78,16 +120,22 @@ public enum ModBlocks {
         public void generate(BlockFactory factory) {
             factory.newBlockGroup("industrial_corroded", 15F, 8F, 0F, Material.IRON, false)
             .next()
-            .next("plate_large")
-            .next("panel_large")
-            .next("bracing_p4")
-            .next("bracing_p8")
-            .next("ring_p8")
+            .next(PLATE_LARGE)
+            .next(PANEL_LARGE)
+            .next(BRACING_P4)
+            .next(BRACING_P8)
+            .next(RING_P8)
             .build();
         }
     };
 
     public static final List<Block> BLOCKS = new ArrayList<>();
+
+    public static final String PLATE_LARGE = "plate_large";    
+    public static final String PANEL_LARGE = "panel_large";    
+    public static final String BRACING_P4 = "bracing_p4";
+    public static final String BRACING_P8 = "bracing_p8";
+    public static final String RING_P8 = "ring_p8";    
 
     public void generate(BlockFactory factory) {}
 

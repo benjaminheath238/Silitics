@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/laboratory/shiny/industrial_shiny_bracing_p4",
+    "down": "silitics:blocks/laboratory/shiny/industrial_shiny_bracing_p4",
+    "up": "silitics:blocks/laboratory/shiny/industrial_shiny_bracing_p4",
+    "east": "silitics:blocks/laboratory/shiny/industrial_shiny_bracing_p4",
+    "west": "silitics:blocks/laboratory/shiny/industrial_shiny_bracing_p4",
+    "north": "silitics:blocks/laboratory/shiny/industrial_shiny_bracing_p4",
+    "south": "silitics:blocks/laboratory/shiny/industrial_shiny_bracing_p4"
+  }
+}

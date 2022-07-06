@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/laboratory/green/industrial_green_panel_large",
+    "down": "silitics:blocks/laboratory/green/industrial_green_panel_large",
+    "up": "silitics:blocks/laboratory/green/industrial_green_panel_large",
+    "east": "silitics:blocks/laboratory/green/industrial_green_panel_large",
+    "west": "silitics:blocks/laboratory/green/industrial_green_panel_large",
+    "north": "silitics:blocks/laboratory/green/industrial_green_panel_large",
+    "south": "silitics:blocks/laboratory/green/industrial_green_panel_large"
+  }
+}

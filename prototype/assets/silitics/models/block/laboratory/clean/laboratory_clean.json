@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/laboratory/clean/laboratory_clean",
+    "down": "silitics:blocks/laboratory/clean/laboratory_clean",
+    "up": "silitics:blocks/laboratory/clean/laboratory_clean",
+    "east": "silitics:blocks/laboratory/clean/laboratory_clean",
+    "west": "silitics:blocks/laboratory/clean/laboratory_clean",
+    "north": "silitics:blocks/laboratory/clean/laboratory_clean",
+    "south": "silitics:blocks/laboratory/clean/laboratory_clean"
+  }
+}
