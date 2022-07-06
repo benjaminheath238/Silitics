@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/factory/corroded/factory_corroded_panel_large",
+    "down": "silitics:blocks/factory/corroded/factory_corroded_panel_large",
+    "up": "silitics:blocks/factory/corroded/factory_corroded_panel_large",
+    "east": "silitics:blocks/factory/corroded/factory_corroded_panel_large",
+    "west": "silitics:blocks/factory/corroded/factory_corroded_panel_large",
+    "north": "silitics:blocks/factory/corroded/factory_corroded_panel_large",
+    "south": "silitics:blocks/factory/corroded/factory_corroded_panel_large"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/factory/dark/factory_dark_plate_large",
+    "down": "silitics:blocks/factory/dark/factory_dark_plate_large",
+    "up": "silitics:blocks/factory/dark/factory_dark_plate_large",
+    "east": "silitics:blocks/factory/dark/factory_dark_plate_large",
+    "west": "silitics:blocks/factory/dark/factory_dark_plate_large",
+    "north": "silitics:blocks/factory/dark/factory_dark_plate_large",
+    "south": "silitics:blocks/factory/dark/factory_dark_plate_large"
+  }
+}

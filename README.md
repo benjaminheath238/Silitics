@@ -1,6 +1,6 @@
 # Silitics
 
-Silitics is a mod for Minecraft 1.12.2.
+Silitics is a mod for Minecraft 1.12.2 adding blocks and items with an industrial them.
 
 ---
 

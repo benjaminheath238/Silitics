@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "silitics:blocks/factory/normal/factory_normal",
+    "down": "silitics:blocks/factory/normal/factory_normal",
+    "up": "silitics:blocks/factory/normal/factory_normal",
+    "east": "silitics:blocks/factory/normal/factory_normal",
+    "west": "silitics:blocks/factory/normal/factory_normal",
+    "north": "silitics:blocks/factory/normal/factory_normal",
+    "south": "silitics:blocks/factory/normal/factory_normal"
+  }
+}
