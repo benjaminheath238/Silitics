@@ -132,7 +132,7 @@ public enum ModBlocks {
     CONCRETE() {
         @Override
         public void generate(BlockFactory factory) {
-            factory.newBlockGroup("industrial_corroded", 15F, 8F, 0F, Material.IRON, false)
+            factory.newBlockGroup("concrete", 10F, 50F, 0F, Material.ROCK, false)
             .next("blue")
             .next("cyan")
             .next("dark")
