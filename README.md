@@ -8,4 +8,4 @@ Silitics is a mod for Minecraft 1.12.2 adding blocks and items with an industria
 
 ## Licensing
 
-This software is licenced under the MIT license the definition of which can be found in the [LICENCE](LICENSE) file.
+This software is licenced under the MIT license the definition of which can be found in the [LICENSE](LICENSE) file.
