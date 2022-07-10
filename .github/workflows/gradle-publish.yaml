@@ -2,13 +2,13 @@ name: Gradle Publish
 
 on:
   push:
-    branches: ['master']
+    branches: ['release']
   pull_request:
-    branches: ['master']
+    branches: ['release']
 
 jobs:
   publish:
-    name: Build
+    name: Publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,13 +27,24 @@ jobs:
       - name: Capture Artefacts
         uses: actions/upload-artifact@v3
         with:
-          name: Artefacts
+          name: Jars
           path: build/libs/
 
       - name: Create Release
+        id: create-release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.event.head_commit.message }}
-          release_name: Release ${{ github.event.head_commit.message }}
+          tag_name: v${{ github.event.head_commit.message }}
+          release_name: Release v${{ github.event.head_commit.message }}
+
+      - name: Added Artefacts to Release
+        uses: actions/upload-release-assets@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create-release.output.upload_url }}
+          asset_path: build/libs/Silitics-${{ github.event.head_commit.message }}.jar
+          asset_name: Silitics-${{ github.event.head_commit.message }}.jar
+          asset_content_type: application/java-archive
