@@ -38,7 +38,7 @@ jobs:
     
     - name: Set Environment Variables
       run: |
-        echo "version=grep "version" build.gradle | awk '{print $2}'" >> $GITHUB_ENV
+        echo "version=$(grep "version" build.gradle | awk '{print $2}')" >> $GITHUB_ENV
 
     - name: Create GitHub Release
       id: create-release
