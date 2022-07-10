@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class SiliticsTabs extends CreativeTabs {
-    public static final SiliticsTabs SILITICS_GENERAL_TAB = new SiliticsTabs("SILITICS_GENERAL_TAB", ModItems.ITEMS.get(0));
+    public static final SiliticsTabs SILITICS_GENERAL_TAB = new SiliticsTabs("silitics_general_tab", ModItems.ITEMS.get(0));
 
     protected final ItemStack icon;
 

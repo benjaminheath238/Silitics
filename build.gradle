@@ -87,6 +87,13 @@ dependencies {
 
 // Example for how to get properties into the manifest for reading by the runtime..
 jar {
+    exclude("assets/silitics/textures/blocks/layers/",
+            "assets/silitics/textures/blocks/bases/",
+            "assets/silitics/textures/items/layers/",
+            "assets/silitics/textures/items/bases/",
+            "mcdg.ini",
+            "silitics.ini")
+
     manifest {
         attributes([
             "Specification-Title": "Silitics",
