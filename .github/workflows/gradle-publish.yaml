@@ -44,7 +44,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create-release.outputs.upload_url }}
+          upload_url: ${{ steps.release.outputs.upload_url }}
           asset_path: build/libs/Silitics-${{ github.run_number }}.jar
           asset_name: Silitics-${{ github.run_number }}.jar
           asset_content_type: application/java-archive
