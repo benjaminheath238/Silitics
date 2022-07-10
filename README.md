@@ -1,5 +1,4 @@
-[![Gradle Build](https://github.com/benjaminheath238/Silitics/actions/workflows/gradle-build.yaml/badge.svg)](https://github.com/benjaminheath238/Silitics/actions/workflows/gradle-build.yaml)
-[![Gradle Publish](https://github.com/benjaminheath238/Silitics/actions/workflows/gradle-publish.yml/badge.svg)](https://github.com/benjaminheath238/Silitics/actions/workflows/gradle-publish.yml)
+[![Gradle Intergration](https://github.com/benjaminheath238/Silitics/actions/workflows/intergration.yaml/badge.svg)](https://github.com/benjaminheath238/Silitics/actions/workflows/intergration.yaml)
 
 # Silitics
 
