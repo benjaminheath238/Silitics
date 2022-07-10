@@ -31,7 +31,7 @@ jobs:
     steps: 
     - uses: actions/checkout@v3
     - name: Capture Artefacts
-      uses: actions/upload-artefact@v3
+      uses: actions/upload-artifact@v3
       with:
         name: Silitics.jar
         path: build/libs/*
