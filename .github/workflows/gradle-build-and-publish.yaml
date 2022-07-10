@@ -23,6 +23,12 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           arguments: build
+      
+      - name: Capture Artefacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Artefacts
+          path: build/libs/
 
   publish:
     name: Publish
@@ -30,8 +36,4 @@ jobs:
     needs: build
     steps: 
     - uses: actions/checkout@v3
-    - name: Capture Artefacts
-      uses: actions/upload-artifact@v3
-      with:
-        name: Artefacts
-        path: build/libs/
+    
