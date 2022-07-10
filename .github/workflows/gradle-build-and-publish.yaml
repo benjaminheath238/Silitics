@@ -33,5 +33,5 @@ jobs:
     - name: Capture Artefacts
       uses: actions/upload-artifact@v3
       with:
-        name: Silitics.jar
-        path: build/libs/*
+        name: Artefacts
+        path: build/libs/
