@@ -34,5 +34,5 @@ run
 # Files from Forge MDK
 forge*changelog.txt
 
-# Prototype Files
-prototype/*.log
+# Log files
+*.log
