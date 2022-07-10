@@ -125,3 +125,9 @@ publishing {
         }
     }
 }
+
+tasks.register("githubSetVersion") {
+    doLast {
+        echo "version=v${project.version}" >> $GITHUB_ENV
+    }
+}

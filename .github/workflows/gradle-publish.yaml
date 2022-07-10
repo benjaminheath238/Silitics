@@ -30,10 +30,15 @@ jobs:
           name: Artefacts
           path: build/libs/
 
+      - name: Set Version Env Var
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: githubSetVersion
+
       - name: Create Release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v${{ github.action_ref }}
-          release_name: Release v${{ github.action_ref }}
+          tag_name: ${{ env.version }}
+          release_name: Release ${{ env.version }}
