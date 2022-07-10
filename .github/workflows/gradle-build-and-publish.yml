@@ -39,6 +39,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: Artefacts
+        path: build/libs/
       
   publish:
     name: Publish
@@ -49,6 +50,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: Artefacts
+          path: build/libs/
       - name: Create GitHub Release
         id: create-release
         uses: actions/create-release@v1
