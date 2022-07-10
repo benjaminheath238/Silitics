@@ -13,13 +13,15 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '16'
+version = '17'
 group = 'com.bjmh.silitics' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'Silitics'
 
-sourceCompatibility = targetCompatibility = '1.8'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
-compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
+compileJava.sourceCompatibility = '1.8'
+compileJava.targetCompatibility = '1.8'
 
 minecraft {
     // The mappings can be changed at any time, and must be in the following format.
