@@ -1,14 +1,12 @@
-name: Gradle Intergration
+name: Gradle CI
 
 on:
-  push:
-    branches: ['master']
   pull_request:
     branches: ['master']
 
 jobs:
-  interate:
-    name: Intergrate
+  ci:
+    name: CI
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
