@@ -4,15 +4,12 @@
 # documentation.
 # This workflow will build a package using Gradle and then publish it to GitHub packages when a release is created
 # For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#Publishing-using-gradle
-
 name: Gradle Build and Publish
-
 on:
   push:
     branches: ["master"]
   pull_request:
     branches: ["master"]
-
 jobs:
   build:
     name: Build
@@ -30,35 +27,40 @@ jobs:
         distribution: adopt
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
-    
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: build
     
-    - name: Set Environment Variables
-      env: 
-        VERSION: $(grep "version" build.gradle | awk '{print $2}')
-      run: echo ${{ env.VERSION }}
-      #run: |
-      #  echo "version=$(grep "version" build.gradle | awk '{print $2}')" >> $GITHUB_ENV
+    - name: Save Build Artefacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: Artefacts
+        path: build/libs/
 
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+    steps:
+    #- uses: actions/download-artifact@v3
+    #  with:
+    #    name: Artefacts
+    #    path: build/libs/
     - name: Create GitHub Release
       id: create-release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: v${VERSION}
-        release_name: Release v${VERSION}
-    
+        tag_name: v${{ github.run_number }}
+        release_name: Release v${{ github.run_number }}
     - name: Upload Artefacts to Release
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create-release.outputs.upload_url }}
-        asset_path: ./Silitics-v${{ env.version }}.jar
-        asset_name: build/libs/Silitics-v${{ env.version }}.jar
+        asset_path: build/libs/
+        asset_name: Silitics-v${{ github.run_number }}.jar
         asset_content_type: application/java-archive
   
