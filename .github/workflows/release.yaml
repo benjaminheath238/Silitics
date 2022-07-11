@@ -9,12 +9,12 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      #- name: Export Tag & Version Number to Environment
-      #  env:
-      #    TAG: ${{ github.event.release.tag_name }}
+      - name: Export Tag & Version Number to Environment
+        env:
+          TAG: ${{ github.event.release.tag_name }}
       #    VERSION: ${{  }}
-      #  run: |
-      #    echo "TAG=${TAG}" >> $GITHUB_ENV
+        run: |
+          echo "TAG=${TAG}" >> $GITHUB_ENV
       #    echo "VERSION=${VERSION}" >> $GITHUB_ENV
       - uses: actions/checkout@v3
       

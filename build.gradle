@@ -85,6 +85,24 @@ dependencies {
 
 }
 
+ext.tag = System.getenv('TAG') ?: ""
+if (ext.tag) {
+    //if (!ext.tag.startsWith("v")) {
+    //    throw new GradleException("Tags should start with v: ${ext.tag}")
+    //}
+
+    version = ext.tag.substring("v".length())
+    // Validate that the rest is a semver version
+    if (version ==~ /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/) {
+        if (System.getenv("GITHUB_ENV")) {
+            def envFile = new File(System.getenv("GITHUB_ENV"))
+            envFile.append("VERSION=${version}")
+        }
+    } else {
+        throw new GradleException("Invalid semver: $version")
+    }
+}
+
 // Example for how to get properties into the manifest for reading by the runtime..
 jar {
     exclude("assets/silitics/textures/blocks/layers/",
