@@ -46,7 +46,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{ steps.prepare_artifact_metadata.outputs.ARTIFACT_PATH }}
-          asset_name: ${{ steps.prepare_artifact_metadata.outputs.ARTIFACT_NAME }}
+          asset_path: build/libs/Silitics-${{ env.VERSION }}.jar
+          asset_name: Silitics-${{ env.VERSION }}.jar
           asset_content_type: application/java-archive
 
