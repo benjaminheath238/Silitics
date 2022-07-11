@@ -1,4 +1,4 @@
-name: Release
+name: Publishing
 
 on:
   release:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build
+    name: Build And publish
     runs-on: ubuntu-latest
     steps:
       - name: Export Tag & Version Number to Environment
@@ -34,12 +34,6 @@ jobs:
           path: build/libs/
           name: Jars
 
-      - name: Prepare artifact metadata
-        id: prepare_artifact_metadata
-        run: |
-          echo ::set-output name=ARTIFACT_PATH::build/libs/Silitics-${VERSION}.jar
-          echo ::set-output name=ARTIFACT_NAME::Silitics-${VERSION}.jar
-      
       - name: Upload Assets
         uses: actions/upload-release-asset@v1
         env:

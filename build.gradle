@@ -24,8 +24,6 @@ compileJava.sourceCompatibility = '1.8'
 compileJava.targetCompatibility = '1.8'
 
 if (System.getenv("GITHUB_ENV")) {
-    println "ad"
-
     def env = new File(System.getenv("GITHUB_ENV"))
     env.append("VERSION=${version}")
 }
