@@ -1,8 +1,8 @@
 name: Publishing
 
 on:
-  push:
-    tags: ["v*.*.*"]
+  release:
+    types: [published]
 
 jobs:
   build:
@@ -34,19 +34,13 @@ jobs:
           path: build/libs/
           name: Jars
 
-      - name: Create Release
-        id: release
-        uses: actions/create-release@v1
-        with:
-          tag_name: ${{ env.TAG }}
-          release_name: Release ${{ env.TAG }}
-
       - name: Upload Assets
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ step.release.outputs.upload_url }}
+          upload_url: ${{ github.event.release.upload_url }}
           asset_path: build/libs/Silitics-${{ env.VERSION }}.jar
           asset_name: Silitics-${{ env.VERSION }}.jar
           asset_content_type: application/java-archive
+
