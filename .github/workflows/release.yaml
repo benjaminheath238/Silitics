@@ -36,8 +36,6 @@ jobs:
 
       - name: Prepare artifact metadata
         id: prepare_artifact_metadata
-        env:
-          VERSION: ${{ steps.get_version.outputs.VERSION }}
         run: |
           echo ::set-output name=ARTIFACT_PATH::build/libs/Silitics-${VERSION}.jar
           echo ::set-output name=ARTIFACT_NAME::Silitics-${VERSION}.jar

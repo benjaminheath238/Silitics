@@ -23,6 +23,11 @@ targetCompatibility = '1.8'
 compileJava.sourceCompatibility = '1.8'
 compileJava.targetCompatibility = '1.8'
 
+if (System.getenv("GITHUB_ENV")) {
+    def env = new File(System.getenv("GITHUB_ENV"))
+    env.append("VERSION=${version}")
+}
+
 minecraft {
     // The mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   Snapshot are built nightly.
@@ -83,24 +88,6 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
-}
-
-ext.tag = System.getenv('TAG') ?: ""
-if (ext.tag) {
-    //if (!ext.tag.startsWith("v")) {
-    //    throw new GradleException("Tags should start with v: ${ext.tag}")
-    //}
-
-    version = ext.tag.substring("v".length())
-    // Validate that the rest is a semver version
-   // if (version ==~ /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/) {
-        if (System.getenv("GITHUB_ENV")) {
-            def envFile = new File(System.getenv("GITHUB_ENV"))
-            envFile.append("VERSION=${version}")
-        }
-    //} else {
-    //    throw new GradleException("Invalid semver: $version")
-    //}
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..
