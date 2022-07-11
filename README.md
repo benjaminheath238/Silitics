@@ -1,4 +1,4 @@
-[![Gradle Intergration](https://github.com/benjaminheath238/Silitics/actions/workflows/intergration.yaml/badge.svg)](https://github.com/benjaminheath238/Silitics/actions/workflows/intergration.yaml)
+[![Publishing](https://github.com/benjaminheath238/Silitics/actions/workflows/publishing.yaml/badge.svg)](https://github.com/benjaminheath238/Silitics/actions/workflows/publishing.yaml)
 
 # Silitics
 
