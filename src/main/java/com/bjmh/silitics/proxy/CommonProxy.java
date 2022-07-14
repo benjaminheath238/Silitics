@@ -35,7 +35,8 @@ public class CommonProxy {
             event.getRegistry().register(block);
 
             if (block instanceof BlockTileEntity) {
-                GameRegistry.registerTileEntity(((BlockTileEntity<?>) block).getTileEntityClass(), block.getRegistryName());
+                GameRegistry.registerTileEntity(((BlockTileEntity<?>) block).getTileEntityClass(),
+                        block.getRegistryName());
             }
         }
     }
