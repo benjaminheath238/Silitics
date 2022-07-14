@@ -3,7 +3,7 @@ package com.bjmh.silitics.factory;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bjmh.silitics.item.SiliticsItem;
+import com.bjmh.silitics.item.ItemBase;
 
 import net.minecraft.item.Item;
 
@@ -18,12 +18,12 @@ public class ItemFactory {
     }
 
     public ItemFactory next(String name) {
-        items.add(new SiliticsItem(baseName + "_" + name));
+        items.add(new ItemBase(baseName + "_" + name));
         return this;
     }
 
     public ItemFactory next() {
-        items.add(new SiliticsItem(baseName));
+        items.add(new ItemBase(baseName));
         return this;
     }
 

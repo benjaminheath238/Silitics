@@ -9,8 +9,8 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class SiliticsItem extends Item {
-    public SiliticsItem(String name) {
+public class ItemBase extends Item {
+    public ItemBase(String name) {
         setUnlocalizedName(Silitics.MODID + "." + name);
         setRegistryName(Silitics.MODID + ":" + name);
         setCreativeTab(SiliticsTabs.SILITICS_GENERAL_TAB);

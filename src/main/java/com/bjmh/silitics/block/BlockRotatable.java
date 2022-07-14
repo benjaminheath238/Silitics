@@ -10,16 +10,16 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class SiliticsBlockRotatable extends SiliticsBlock {
+public class BlockRotatable extends BlockBase {
 
     public static final PropertyDirection FACING = PropertyDirection.create("facing");
 
-    public SiliticsBlockRotatable(Material materialIn, String name, float hardness, float resistance, float light) {
+    public BlockRotatable(Material materialIn, String name, float hardness, float resistance, float light) {
         super(materialIn, name, hardness, resistance, light);
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }
 
-    public SiliticsBlockRotatable(Material materialIn, String name) {
+    public BlockRotatable(Material materialIn, String name) {
         super(materialIn, name);
         setDefaultState(blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
     }

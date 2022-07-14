@@ -14,7 +14,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.bjmh.silitics.proxy.CommonProxy;
-import com.bjmh.silitics.world.SiliticsWorldGen;
+import com.bjmh.silitics.world.WorldGen;
 
 @Mod(modid = Silitics.MODID, name = Silitics.NAME, version = Silitics.VERSION)
 public class Silitics {
@@ -32,7 +32,7 @@ public class Silitics {
     public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit(event);
 
-        GameRegistry.registerWorldGenerator(new SiliticsWorldGen(), 3);
+        GameRegistry.registerWorldGenerator(new WorldGen(), 3);
     }
 
     @EventHandler

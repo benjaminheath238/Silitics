@@ -4,8 +4,8 @@ package com.bjmh.silitics.factory;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.bjmh.silitics.block.SiliticsBlock;
-import com.bjmh.silitics.block.SiliticsBlockRotatable;
+import com.bjmh.silitics.block.BlockBase;
+import com.bjmh.silitics.block.BlockRotatable;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -34,9 +34,9 @@ public class BlockFactory {
     public BlockFactory next(String name, float hardness, float resistance, float light, Material material,
             boolean rotates) {
         if (rotates) {
-            blocks.add(new SiliticsBlockRotatable(material, baseName + "_" + name, hardness, resistance, light));
+            blocks.add(new BlockRotatable(material, baseName + "_" + name, hardness, resistance, light));
         } else {
-            blocks.add(new SiliticsBlock(material, baseName + "_" + name, hardness, resistance, light));
+            blocks.add(new BlockBase(material, baseName + "_" + name, hardness, resistance, light));
         }
         return this;
     }
@@ -47,9 +47,9 @@ public class BlockFactory {
 
     public BlockFactory next() {
         if (rotates) {
-            blocks.add(new SiliticsBlockRotatable(material, baseName, hardness, resistance, light));
+            blocks.add(new BlockRotatable(material, baseName, hardness, resistance, light));
         } else {
-            blocks.add(new SiliticsBlock(material, baseName, hardness, resistance, light));
+            blocks.add(new BlockBase(material, baseName, hardness, resistance, light));
         }
         return this;
     }

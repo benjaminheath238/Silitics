@@ -11,9 +11,9 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class SiliticsBlock extends Block {
+public class BlockBase extends Block {
 
-    public SiliticsBlock(Material materialIn, String name, float hardness, float resistance, float light) {
+    public BlockBase(Material materialIn, String name, float hardness, float resistance, float light) {
         super(materialIn);
         setUnlocalizedName(Silitics.MODID + "." + name);
         setRegistryName(Silitics.MODID + ":" + name);
@@ -24,7 +24,7 @@ public class SiliticsBlock extends Block {
         ModBlocks.BLOCKS.add(this);
     }
 
-    public SiliticsBlock(Material materialIn, String name) {
+    public BlockBase(Material materialIn, String name) {
         this(materialIn, name, 1.5F, 10F, 0F);
     }
 

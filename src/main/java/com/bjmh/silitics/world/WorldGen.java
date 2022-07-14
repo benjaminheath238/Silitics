@@ -10,7 +10,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraftforge.fml.common.IWorldGenerator;
 
-public class SiliticsWorldGen implements IWorldGenerator {
+public class WorldGen implements IWorldGenerator {
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator,
             IChunkProvider chunkProvider) {

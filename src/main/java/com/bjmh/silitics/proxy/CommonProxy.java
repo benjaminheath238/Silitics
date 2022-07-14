@@ -1,5 +1,6 @@
 package com.bjmh.silitics.proxy;
 
+import com.bjmh.silitics.block.BlockTileEntity;
 import com.bjmh.silitics.block.ModBlocks;
 import com.bjmh.silitics.item.ModItems;
 
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
@@ -31,6 +33,10 @@ public class CommonProxy {
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
         for (Block block : ModBlocks.BLOCKS) {
             event.getRegistry().register(block);
+
+            if (block instanceof BlockTileEntity) {
+                GameRegistry.registerTileEntity(((BlockTileEntity<?>) block).getTileEntityClass(), block.getRegistryName());
+            }
         }
     }
 

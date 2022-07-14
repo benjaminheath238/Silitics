@@ -1,9 +1,9 @@
 package com.bjmh.silitics.proxy;
 
 import com.bjmh.silitics.block.ModBlocks;
-import com.bjmh.silitics.block.SiliticsBlock;
+import com.bjmh.silitics.block.BlockBase;
 import com.bjmh.silitics.item.ModItems;
-import com.bjmh.silitics.item.SiliticsItem;
+import com.bjmh.silitics.item.ItemBase;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -35,11 +35,11 @@ public class ClientProxy extends CommonProxy {
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
         for (Block block : ModBlocks.BLOCKS) {
-            ((SiliticsBlock) block).initModel();
+            ((BlockBase) block).initModel();
         }
 
         for (Item item : ModItems.ITEMS) {
-            ((SiliticsItem) item).initModel();
+            ((ItemBase) item).initModel();
         }
     }
 }
